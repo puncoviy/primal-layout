@@ -599,3 +599,37 @@ body {
 .program__btn {
     display: inline-block;
 }
+
+/* GALLERY */
+
+.gallery {
+    margin-bottom: 90px;
+}
+
+.gallry__title {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    margin-bottom: 88px;
+}
+
+.gallry__title::before {
+    position: absolute;
+    content: 'программа';
+    font-family: 'Besom';
+    font-size: 180px;
+    color: rgba(50, 56, 63, 0.2);
+    width: 100%;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.gallery__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 285px;
+}
