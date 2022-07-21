@@ -1,10 +1,57 @@
+@font-face {
+    font-family: 'Besom';
+    src: url('../fonts/Besom.woff') format('woff'),
+        url('../fonts/Besom.eot') format('eot'),
+        url('../fonts/Besom.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CoreSansE-35Light', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/CoreSansE-35Light.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'CoreSansE-45Regular', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/CoreSansE-45Regular.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'CoreSansE-55Medium', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/CoreSansE-55Medium.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'CoreSansE-65Bold', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/CoreSansE-65Bold.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'CoreSansE-95Black', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/CoreSansE-95Black.otf') format('otf');
+}
+
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'CoreSansE-45Regular', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 23px;
-    color: #636363;
+    line-height: 24px;
+    color: #4c4c4c;
+    background-image: url(../img/bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -25,8 +72,42 @@ body {
 }
 
 .title {
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 124.41%;
-    color: #000;
+    font-weight: 900;
+    font-size: 68px;
+    line-height: auto;
+    color: #ff0000;
+}
+
+/* HEADER */
+
+.header__inner {
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 130px;
+}
+
+.header__info {
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 15px;
+    position: relative;
+}
+
+.header__info::before {
+    position: absolute;
+    content: '';
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3)  30%, rgba(255,255,255,0.3) 70%, rgba(255,255,255,0) 100%);
+}
+
+.header__phone {
+    font-size: 25px;
+    font-family: 'CoreSansE-55Medium', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
 }
