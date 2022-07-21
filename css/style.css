@@ -75,6 +75,7 @@ body {
     font-family: 'CoreSansE-95Black', sans-serif;
     font-size: 68px;
     line-height: auto;
+    letter-spacing: 5px;
     color: #ff0000;
     text-transform: uppercase;
 }
@@ -351,11 +352,13 @@ body {
     counter-reset: instr-counter;
     margin-bottom: 140px;
 }
+
 .instructions__item {
     position: relative;
     margin-left: 210px;
     margin-top: -15px;
 }
+
 .instructions__item::before {
     position: absolute;
     counter-increment: instr-counter;
@@ -400,15 +403,11 @@ body {
 .instructions__item:nth-child(2n) {
     align-self: flex-end;
 }
-.instructions__item-title {
-}
-.item-title {
-}
+
 .instructions__item-text {
     max-width: 305px;
 }
-.item-text {
-}
+
 .instructions__subtitle {
     font-family: 'CoreSansE-95Black', sans-serif;
     text-align: center;
@@ -418,19 +417,23 @@ body {
     text-transform: uppercase;
     margin-bottom: 82px;
 }
+
 .instructions__urban-list {
     display: flex;
     justify-content: space-between;
     background: url(../img/instructions-decor.png) no-repeat;
     background-size: 90%;
 }
+
 .instructions__urban-item {
     padding-right: 75px;
     padding-top: 82px;
 }
+
 .instructions__urban-text {
     position: relative;
 }
+
 .instructions__urban-text::before {
     position: absolute;
     color: #fff;
@@ -460,4 +463,68 @@ body {
 .instructions__urban-item:nth-child(5) .instructions__urban-text::before {
     content: '5';
     left: 62px;
+}
+
+/* SKILLS */
+
+.skills {
+    margin-bottom: 265px;
+    background: url(../img/skills-bg.jpg) left center no-repeat;
+    background-size: contain;
+}
+
+.skills__title {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    margin-bottom: 120px;
+}
+
+.skills__title::before {
+    position: absolute;
+    content: 'Ты приобретёшь';
+    font-family: 'Besom';
+    font-size: 180px;
+    color: rgba(50, 56, 63, 0.2);
+    width: 100%;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.skills__list {
+    margin-left: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 85px;
+    position: relative;
+}
+
+.skills__list::before {
+    position: absolute;
+    content: url(../img/skills-decor.png);
+    left: -40%;
+    top: -5%;
+}
+
+.skills__item {
+    max-width: 220px;
+}
+
+.skills__item:nth-child(2) {
+    margin-left: 122px;
+}
+
+.skills__item:nth-child(3) {
+    margin-left: 198px;
+}
+
+.skills__item:nth-child(4) {
+    margin-left: 235px;
+}
+
+.skills__item:nth-child(5) {
+    margin-left: 255px;
 }
