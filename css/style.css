@@ -528,3 +528,74 @@ body {
 .skills__item:nth-child(5) {
     margin-left: 255px;
 }
+
+/* program */
+
+.program {
+    margin-bottom: 170px;
+}
+
+.program__title {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    margin-bottom: 93px;
+}
+
+.program__title::before {
+    position: absolute;
+    content: 'программа';
+    font-family: 'Besom';
+    font-size: 180px;
+    color: rgba(50, 56, 63, 0.2);
+    width: 100%;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+.program__inner {
+    padding: 140px 150px;
+    background: no-repeat url(../img/programm-bg.jpg) center center / cover;
+}
+.program__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 38px;
+    max-height: 300px;
+    counter-reset: prog-count;
+    margin-bottom: 90px;
+}
+.program__item {
+    position: relative;
+    margin-left: 45px;
+}
+.program__item::before {
+    position: absolute;
+    counter-increment: prog-count;
+    content: '0' counter(prog-count);
+    font-family: 'Besom';
+    color: #ff0000;
+    font-size: 30px;
+    left: -40px;
+}
+.program__item-text {
+    max-width: 325px;
+}
+.program__sub-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+.program__subscribe {
+    display: inline-block;
+    font-family: 'Besom';
+    color: #ff0000;
+    font-size: 87px;
+}
+.program__btn {
+    display: inline-block;
+}
