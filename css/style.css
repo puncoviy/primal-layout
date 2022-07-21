@@ -633,3 +633,29 @@ body {
     flex-wrap: wrap;
     max-height: 285px;
 }
+
+/* FOOTER */
+
+.footer {
+    margin-bottom: 80px;
+    color: #353535;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: #353535;
+    border-bottom: 1px dashed #353535;
+}
+
+.footer__phone {
+    font-family: 'CoreSansE-55Medium', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    color: #353535;
+}
