@@ -94,6 +94,14 @@ body {
     background-repeat: no-repeat;
 }
 
+.item-title {
+    font-family: 'CoreSansE-65Bold', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
 /* HEADER */
 
 .header__inner {
@@ -195,7 +203,7 @@ body {
     content: 'Что вас ждёт';
     font-family: 'Besom';
     font-size: 180px;
-    color: rgba(50, 56, 63, 0.3);
+    color: rgba(50, 56, 63, 0.2);
     width: 100%;
     text-align: center;
     left: 50%;
@@ -231,13 +239,6 @@ body {
     max-width: 290px;
 }
 
-.item-title {
-    font-family: 'CoreSansE-65Bold', sans-serif;
-    font-size: 20px;
-    line-height: 24px;
-    margin-bottom: 20px;
-}
-
 /* GAINS */
 
 .gains {
@@ -266,7 +267,7 @@ body {
     position: relative;
     z-index: 0;
 }
-/* not(:nth-child(1)) */
+
 .gains__item:not(:nth-child(1))::before {
     position: absolute;
     counter-increment: gains-counter;
@@ -317,6 +318,146 @@ body {
     top: -50%;
 }
 
+/* INSTRUCTIONS */
+
+.instructions {
+    margin-bottom: 205px;
+}
+
+.instructions__title {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    margin-bottom: 135px;
+}
+
+.instructions__title::before {
+    position: absolute;
+    content: 'Ты узнаешь';
+    font-family: 'Besom';
+    font-size: 180px;
+    color: rgba(50, 56, 63, 0.2);
+    width: 100%;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.instructions__list {
+    display: flex;
+    flex-direction: column;
+    counter-reset: instr-counter;
+    margin-bottom: 140px;
+}
+.instructions__item {
+    position: relative;
+    margin-left: 210px;
+    margin-top: -15px;
+}
+.instructions__item::before {
+    position: absolute;
+    counter-increment: instr-counter;
+    content: '0' counter(instr-counter);
+    font-family: 'Besom';
+    font-size: 205px;
+    line-height: 170px;
+    color: rgba(255, 255, 255, 0.5);
+    left: -210px;
+}
+
+.instructions__item:nth-child(1):before {
+    background:url(../img/instr1.jpg) no-repeat center/cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.instructions__item:nth-child(2):before {
+    background:url(../img/instr2.jpg) no-repeat center/cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.instructions__item:nth-child(3):before {
+    background:url(../img/instr3.jpg) no-repeat center/cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.instructions__item:nth-child(4):before {
+    background:url(../img/instr4.jpg) no-repeat center/cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.instructions__item:nth-child(5):before {
+    background:url(../img/instr5.jpg) no-repeat center/cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.instructions__item:nth-child(2n) {
+    align-self: flex-end;
+}
+.instructions__item-title {
+}
 .item-title {
+}
+.instructions__item-text {
+    max-width: 305px;
+}
+.item-text {
+}
+.instructions__subtitle {
+    font-family: 'CoreSansE-95Black', sans-serif;
+    text-align: center;
+    font-size: 36px;
+    line-height: normal;
+    color: #ff0000;
     text-transform: uppercase;
+    margin-bottom: 82px;
+}
+.instructions__urban-list {
+    display: flex;
+    justify-content: space-between;
+    background: url(../img/instructions-decor.png) no-repeat;
+    background-size: 90%;
+}
+.instructions__urban-item {
+    padding-right: 75px;
+    padding-top: 82px;
+}
+.instructions__urban-text {
+    position: relative;
+}
+.instructions__urban-text::before {
+    position: absolute;
+    color: #fff;
+    top: -69px;
+}
+
+.instructions__urban-item:nth-child(1) .instructions__urban-text::before {
+    content: '1';
+    left: 21px;
+}
+
+.instructions__urban-item:nth-child(2) .instructions__urban-text::before {
+    content: '2';
+    left: 6px;
+}
+
+.instructions__urban-item:nth-child(3) .instructions__urban-text::before {
+    content: '3';
+    left: 17px;
+}
+
+.instructions__urban-item:nth-child(4) .instructions__urban-text::before {
+    content: '4';
+    left: 17px;
+}
+
+.instructions__urban-item:nth-child(5) .instructions__urban-text::before {
+    content: '5';
+    left: 62px;
 }
