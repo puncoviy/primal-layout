@@ -224,7 +224,7 @@ body {
     align-items: center;
 }
 
-.roadmap__item:nth-child(2n) {
+.roadmap__item:nth-child(even) {
     align-self: flex-end;
 }
 
@@ -701,6 +701,7 @@ body {
         margin-left: auto;
     }
 }
+
 @media (max-width: 1110px ) {
     .program__inner {
         padding: 140px 0;
@@ -712,6 +713,44 @@ body {
     }
     .program__subscribe {
         font-size: 76px;
+    }
+}
+
+@media (max-width: 980px) {
+    .gains__list {
+        flex-direction: column;
+        max-width: 430px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 20px;
+    }
+    .gains__item:not(:nth-child(1)) {
+        padding: 0 10px;
+    }
+    .gains__item-img {
+        width: 100%;
+    }
+    .gains__item .gains__item-title {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .gains__item-subtitle {
+        margin-top: 0;
+    }
+    .gains__item:not(:nth-child(1))::before {
+        top: 0;
+        right: 20px;
+    }
+    .gains__stop-list {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .gains__stop-item {
+        text-align: center;
+    }
+    .gains__item-title {
+        text-align-last: left;
     }
 }
 
@@ -727,12 +766,57 @@ body {
     .title {
         font-size: 48px;
     }
+    .roadmoap__title::before,
+    .instructions__title::before,
+    .skills__title::before,
+    .program__title::before,
+    .gallery__title::before {
+        font-size: 100px;
+    }
+    .roadmap__item:nth-child(even) .roadmap__item-img {
+        order: 1;
+    }
+    .roadmap__item:nth-last-child(1) .roadmap__item-textbox {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        border-radius: 5px;
+    }
 }
 
 @media (max-width: 768px) {
 }
 
+@media (max-width: 660px) {
+    .roadmap__list {
+        background-size: cover;
+    }
+    .roadmap__item {
+        flex-direction: column;
+    }
+    .roadmap__item:nth-child(even) .roadmap__item-img {
+        order: 0;
+    }
+    .roadmap__item:not(:nth-child(1)) {
+        margin-top: 20px;
+    }
+    .roadmap__item:nth-child(odd) {
+        align-self: flex-start;
+    }
+    .roadmap__item-img {
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
 @media (max-width: 585px) {
+    .roadmoap__title::before,
+    .instructions__title::before,
+    .skills__title::before,
+    .program__title::before,
+    .gallery__title::before {
+        font-size: 70px;
+        top: 15%;
+    }
     .header__inner {
         margin-bottom: 70px;
     }
